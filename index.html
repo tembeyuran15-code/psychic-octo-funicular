@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DevPorty</title>
+</head>
+
+<body>
+
+    <div Class="particula"></div>
+
+
+
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" Class="menu-LinK">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" Class="menu-LinK">Sobre</a>
+            </li>
+            <li>
+                <a href="#projectos" Class="menu-LinK">Contacto</a>
+            </li>
+            <li>
+                <a href="#contatos" Class="menu-LinK">Projectos</a>
+            </li>
+
+
+
+    </nav>
+    <main id="inicio" class="Cabecalho">
+        <img src="./img/Yuran123.jpg" alt="foto de perfil" class="Foto-perfil">
+        <h1>Yuran Tembe</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Web</p>
+
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-conteudo">
+            <p class="sobre-texto">
+                Ola! Sou um desenvolvendor wed, tenho 19 anos, moro em Maputo, Mocambique, sou apaixonado por tecnologia
+                e programacao.
+            </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-conteudo">
+
+
+            <div class="projetos-Card">
+                <img Src="./img/loja  virtual.jpeg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Loja Virtual </h3>
+                </div>
+                <p class="paragrafo-projetos"> loja virtual moderna, onde os clientes podem navegar pelos produtos,
+                    adicionar ao carrinho e finalizar a compra.
+            </div>
+
+
+            <div class="projetos-Card">
+                <img Src="./img/painel.jpeg" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+
+                    <h3 class="info-projetos"> Painel de viajens </h3>
+                </div>
+                <p class="paragrafo-projetos"> E uma plataforma que ajuda os utlizadores a planear, organizar e
+                    acompanhar as suas viagems num unico lugar.
+            </div>
+
+
+            <div class="projetos-Card">
+                <img Src="./img/nengocio.jpeg" alt="Projeto 3" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Gestor de Financas Pessoais</h3>
+                </div>
+                <p class="paragrafo-projetos"> Ajuda os utilizadores a gerir as suas finanças pessoais de forma
+                    eficiente.
+            </div>
+
+
+
+            <div>
+    </section>
+    </section id="contatos" class="contatos">
+    <h2 class="contatos-titulo"> Entre em Contacto</h2>
+    <form class="formulario-contato" id="formulario-contato" onsubmit="enviarWhats(event)">
+        <div Class="grupo-form">
+            <input placeholder="Nome" Class="campo-form " id="nome">
+        </div>
+        <div Class="grupo-form">
+
+            <textarea Class="campo-form" placeholder="Digita sua Mensagem" id="mensagem" rows="6"></textarea>
+
+        </div>
+
+
+        <button type="subimit" Class="botao-form">Enviar WhatsApp</button>
+    </form>
+
+    </section>
+    <script>
+        function enviarWhats(event) {
+event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '258841147588'
+
+            const texto = ` Ola! aqui ${nome}, emtrei em contacto atraves do seu *$DVPF: ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+
+
+            window.open(url, '_blank')
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
